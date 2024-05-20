@@ -26,7 +26,7 @@ A aplicação servidor foi construída utilizando a linguagem Python, o framewor
 O FastAPI é responsável por receber as informações enviadas pelo cliente através do formulário, via HTTP, e pelo envio dos e-mails via SMTP. A arquitetura em camadas é a que está sendo utilizada para a organização do projeto. O projeto foi dividido em três camadas: configuração, controle e serviço.
 
 - A camada de **configuração** contém as informações necessárias para estabelecer uma conexão com o servidor SMTP. 
-- A camada de **controle** é responsável por receber as informações enviadas pelo formulário e se conectar com a camada de serviço.
+- A camada de **controle** é responsável por disponibilizar a rota de comunicação entre o cliente e o servidor. O formulário enviado pelo cliente será enviado para a rota ```[POST] http://localhost:8000/api/email/send/```, e após o envio do formulário, a camada de controle irá se conectar com a camada de serviços.
 - Por fim, a camada de **serviço** é responsável por obter as informações da camada de configuração, receber os dados do formulário passados pela camada de controle e estabelecer uma conexão com o servidor SMTP do Gmail para enviar o e-mail solicitado pelo usuário.
 
 ## Pré-Requisitos
