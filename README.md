@@ -10,11 +10,18 @@
 ## Objetivo
 Este projeto tem como finalidade o envio de e-mails através de um formulário HTML que faz uma requisição HTTP para uma aplicação web service responsável pelo envio de e-mails via SMTP. Este sistema foi dividido em dois módulos principais: o frontend, que é a aplicação cliente, e o backend, que é a aplicação servidor.
 
+## Arquitetura do Projeto
+<img src="./img_README/arquitetura.png" style="width: 300px;"/>
+
 ## Aplicação Cliente
 Esta camada do projeto é responsável por obter informações do usuário, como o e-mail de destino, o título do e-mail e a mensagem que será enviada, para o backend que está em localhost na porta 8000.
 
+<img src="./img_README/form.png" style="width: 300px;"/>
+
 ## Aplicação Servidor
 A aplicação servidor foi construída utilizando a linguagem Python, o framework FastAPI e o servidor Uvicorn, que é um servidor para rodar aplicações assíncronas em Python. Nesta parte do projeto, também é utilizado o servidor SMTP do Gmail para que seja possível o envio dos e-mails pelo Web Server.
+
+<img src="./img_README/aplicacao-cliente.png" style="width: 400px;"/>
 
 O FastAPI é responsável por receber as informações enviadas pelo cliente através do formulário, via HTTP, e pelo envio dos e-mails via SMTP. A arquitetura em camadas é a que está sendo utilizada para a organização do projeto. O projeto foi dividido em três camadas: configuração, controle e serviço.
 
